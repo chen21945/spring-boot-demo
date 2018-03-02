@@ -1,6 +1,7 @@
 package org.chen.arch.controller;
 
 import org.chen.arch.core.exception.BusinessException;
+import org.chen.arch.core.request.Limit;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
-	
+
+	@Limit(size = 10)
 	@RequestMapping("h")
 	@ResponseBody
 	public String hello(){
